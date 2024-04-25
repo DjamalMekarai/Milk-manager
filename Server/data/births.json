@@ -1,0 +1,25 @@
+{
+    "lastBirthIdentifier": 10,
+    "birthsList": [
+        {
+            "id": 10,
+            "birthDate": "2024-02-22",
+            "momNumber": "2500"
+        },
+        {
+            "id": 9,
+            "birthDate": "2024-02-29",
+            "momNumber": "1212"
+        },
+        {
+            "id": 8,
+            "birthDate": "2024-02-24",
+            "momNumber": "999"
+        },
+        {
+            "id": 7,
+            "birthDate": "2024-02-18",
+            "momNumber": "331"
+        }
+    ]
+}

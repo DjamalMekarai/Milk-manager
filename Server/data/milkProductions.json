@@ -1,0 +1,25 @@
+{
+    "lastProductionIdentifier": 8,
+    "productionsList": [
+        {
+            "id": 8,
+            "productionDate": "2023-04-09",
+            "milkAmount": "Cream"
+        },
+        {
+            "id": 7,
+            "productionDate": "2024-04-23",
+            "milkAmount": "Cheeses "
+        },
+        {
+            "id": 6,
+            "productionDate": "2024-04-24",
+            "milkAmount": "Liquid milk"
+        },
+        {
+            "id": 5,
+            "productionDate": "2024-02-18",
+            "milkAmount": "2000"
+        }
+    ]
+}

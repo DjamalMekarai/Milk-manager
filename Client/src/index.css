@@ -1,0 +1,454 @@
+/*-------------------------- colors --------------------------*/
+
+:root {
+  --primary: #00a7e0;
+  --secondary: #ff581f;
+  --background: #ffffff;
+  --text: #333333;
+  --input-text: #555555;
+  --gray-white: #f5f5f5;
+  --shaddow: #00000033;
+}
+
+/*-------------------------- global style --------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: rgb(250, 250, 250);
+}
+
+/*-------------------------- Navbar style --------------------------*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 7rem;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--background);
+  box-shadow: 0 0 10px var(--shaddow);
+}
+
+header ul {
+  flex-direction: row-reverse;
+}
+
+header li + li {
+  margin-right: 3rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-bottom: solid 2px transparent;
+  border-top: solid 2px transparent;
+  transition: border 200ms;
+  margin-left: 12px;
+}
+
+.nav-link:not(.nav-link-active):hover {
+  border-bottom-width: 7px;
+}
+
+.nav-link-active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/*-------------------------- main section style --------------------------*/
+
+main {
+  margin-top: 7rem;
+  height: calc(100vh - 7rem);
+  min-height: 350px;
+}
+
+main .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/*-------------------------- pages style --------------------------*/
+
+.page h1 {
+  font-size: 4rem;
+  color: var(--text);
+  padding: 3rem 0;
+  font-weight: 500;
+}
+
+/* OptionsInput, DateInput and TextInput components style */
+
+.arrow-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: var(--input-text);
+  cursor: pointer;
+  transition: transform 200ms;
+}
+
+.list-options {
+  list-style: none;
+  position: absolute;
+  z-index: 50;
+  top: 4rem;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--background);
+  box-shadow: 0 0 5px var(--shaddow);
+}
+
+.list-options li {
+  color: var(--input-text);
+  padding: 0.5rem 2rem;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.list-options li:first-child {
+  padding-top: 0.7rem;
+}
+
+.list-options li:last-child {
+  padding-bottom: 0.7rem;
+}
+
+.list-options li:hover {
+  background-color: var(--gray-white);
+}
+
+/*----------------------- items style -----------------------*/
+
+.items {
+  padding: 3rem 0;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--background);
+  box-shadow: 0 0 5px var(--shaddow);
+}
+
+.item-elements {
+  width: 100%;
+  display: flex;
+}
+
+.item-elements > * {
+  flex: 1;
+}
+
+.item-elements .field {
+  color: var(--text);
+  font-size: 1.8rem;
+  line-height: 3.5rem;
+  font-weight: 500;
+}
+
+.item-elements .value {
+  color: var(--text);
+  opacity: 0.8;
+  font-size: 1.8rem;
+  line-height: 3.5rem;
+  font-weight: 300;
+}
+
+/*-------------------------- AddUpdateForm style --------------------------*/
+
+.add-update-form {
+  min-height: calc(100vh - 7rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.add-update-form form {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--background);
+  box-shadow: 0 0 10px var(--shaddow);
+}
+
+.add-update-form h2 {
+  font-size: 3rem;
+  color: var(--text);
+  margin: 1rem 0 3rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.add-update-form .fields {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.add-update-form .fields > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.add-update-form .fields > * > * {
+  flex: 1;
+}
+
+.add-update-form .fields label {
+  font-weight: 500;
+  color: var(--text);
+  display: inline-block;
+}
+
+.add-update-form .add-update-form-btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 3px;
+}
+
+.add-update-form .add-update-form-btns > * {
+  flex: 1;
+}
+
+/*-------------------------------------------------------------------------*/
+/*-------------------------- Responsive design --------------------------*/
+/*-------------------------------------------------------------------------*/
+
+@media screen and (max-width: 800px) {
+  /*-------------------------- HeaderPage style --------------------------*/
+
+  .header-page .inputs {
+    width: 100%;
+  }
+
+  .header-page .inputs > *:first-child {
+    width: calc((100% - 4rem) / 3);
+  }
+
+  .header-page .inputs > *:last-child {
+    width: calc(2rem + ((2 / 3) * (100% - 4rem)));
+  }
+
+  .header-page .inputs > *:last-child > * {
+    width: calc((100% - 2rem) / 2);
+  }
+
+  .header-page > *:last-child {
+    width: 100%;
+  }
+
+  /*----------------------- items style -----------------------*/
+
+  .item {
+    flex-wrap: wrap;
+  }
+
+  .item-elements > * {
+    text-align: center;
+  }
+
+  .item-btns {
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+    margin-top: calc(1rem + 3px);
+  }
+
+  .item-btns > * {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  /*-------------------------- Navbar style --------------------------*/
+
+  header {
+    height: 5.5rem;
+  }
+
+  .menu-button {
+    display: flex;
+    justify-items: center;
+  }
+
+  header nav {
+    position: fixed;
+    z-index: 75;
+    top: 5.5rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform 200ms;
+  }
+
+  header ul {
+    flex-direction: column;
+  }
+
+  header li + li {
+    margin: 0rem;
+  }
+
+  header li {
+    flex: 1;
+  }
+
+  header li:first-child .nav-link {
+    box-shadow: inset 0 100px 10px -100px var(--shaddow);
+  }
+
+  .nav-link {
+    background-color: var(--gray-white);
+    border-bottom: none;
+    border-top: none;
+    justify-content: center;
+    transition: filter 200ms;
+  }
+
+  .nav-link:not(.nav-link-active):hover {
+    filter: brightness(95%);
+  }
+
+  .nav-link-active {
+    background-color: var(--background);
+    color: var(--primary);
+  }
+
+  .show-menu {
+    transform: translateX(0);
+  }
+
+  .hide-menu {
+    transform: translateX(-100%);
+  }
+
+  /*-------------------------- main section style --------------------------*/
+
+  main {
+    margin-top: 5.5rem;
+    height: calc(100vh - 5.5rem);
+  }
+
+  /*-------------------------- AddUpdateForm style --------------------------*/
+
+  .add-update-form {
+    min-height: calc(100vh - 5.5rem);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*-------------------------- HeaderPage style --------------------------*/
+
+  .header-page .inputs {
+    flex-direction: column;
+  }
+
+  .header-page .inputs > *:first-child {
+    width: 100%;
+  }
+
+  .header-page .inputs > *:last-child {
+    width: 100%;
+  }
+
+  .header-page .inputs > *:last-child > * {
+    width: 100%;
+  }
+
+  .header-page > *:last-child {
+    width: 100%;
+  }
+
+  /*----------------------- items style -------------------------------------*/
+
+  .item-elements {
+    flex-direction: column;
+  }
+
+  .item-elements > * {
+    margin-bottom: 1rem;
+  }
+
+  .item-elements .value,
+  .item-elements .field {
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /*-------------------------- AddUpdateForm style --------------------------*/
+
+  .add-update-form .fields > * {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 9px;
+  }
+
+  /*----------------------- items style ---------------------------------------*/
+
+  .item-btns {
+    flex-direction: column;
+    margin-top: calc(1rem + 3px);
+  }
+
+  .item-btns > * {
+    flex: auto;
+  }
+
+  .item-btns > *:last-child {
+    margin-top: 3px;
+  }
+
+  /*-------------------------- AddUpdateForm style --------------------------*/
+
+  .add-update-form .add-update-form-btns {
+    flex-direction: column;
+  }
+
+  .add-update-form .add-update-form-btns > * {
+    flex: auto;
+  }
+
+  .add-update-form .add-update-form-btns > *:last-child {
+    margin-top: 3px;
+  }
+}

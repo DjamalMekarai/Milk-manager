@@ -1,0 +1,15 @@
+{
+    "lastTestIdentifier": 10,
+    "testsList": [
+        {
+            "id": 8,
+            "testDate": "2024-02-17",
+            "disease": "corona "
+        },
+        {
+            "id": 8,
+            "testDate": "2024-04-17",
+            "disease": "faiblesse "
+        }
+    ]
+}
